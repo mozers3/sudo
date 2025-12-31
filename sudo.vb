@@ -16,13 +16,14 @@ Module Sudo
 		If args.Length = 0 Then
 			Console.Error.WriteLine(vbCrLf & "SUDO for Windows v1.0.1 <https://github.com/mozers3/sudo>" & vbCrLf & vbCrLf & _ 
 			"Usage: sudo [-n] <command> [args...]" & vbCrLf & _ 
-			" -n, --nowait       Not wait for the application to exit (use for launching GUI applications)" & vbCrLf & vbCrLf & _ 
+			" -n, --nowait       Starts the command and does not wait for it to complete. Use to launch GUI applications." & vbCrLf & vbCrLf & _ 
 			"Example:" & vbCrLf & _ 
 			" sudo whoami /groups" & vbCrLf & _ 
 			" sudo -n notepad %windir%\system32\drivers\etc\hosts" & vbCrLf & _ 
+			" sudo bcdedit" & vbCrLf & _ 
 			" sudo net session" & vbCrLf & _ 
-			" sudo cmd /c dir %windir%" & vbCrLf & _ 
-			" sudo cmd /c ""exit /b %RANDOM%"" (and then, ""echo %errorlevel%"")")
+			" sudo net user hacker P@ss123 /add" & vbCrLf & _ 
+			" sudo cmd /c ""exit /b %random%"" (and then, ""echo %errorlevel%"")")
 			Environment.Exit(1)
 		End If
 
