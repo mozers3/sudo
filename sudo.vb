@@ -17,7 +17,7 @@ Module Sudo
 			Console.Error.WriteLine(vbCrLf & "SUDO for Windows v1.0.1 <https://github.com/mozers3/sudo>" & vbCrLf & vbCrLf & _ 
 			"Usage: sudo [-n] <command> [args...]" & vbCrLf & _ 
 			" -n, --nowait       Starts the command and does not wait for it to complete. Use to launch GUI applications." & vbCrLf & vbCrLf & _ 
-			"Example:" & vbCrLf & _ 
+			"Examples:" & vbCrLf & _ 
 			" sudo whoami /groups" & vbCrLf & _ 
 			" sudo -n notepad %windir%\system32\drivers\etc\hosts" & vbCrLf & _ 
 			" sudo bcdedit" & vbCrLf & _ 
@@ -155,7 +155,7 @@ Module Sudo
 		Next
 
 		If list.Count = 0 Then
-			Return False ' нет команды
+			Return False ' ключ указан, а команду - забыли написать
 		End If
 
 		realArgs = DirectCast(list.ToArray(GetType(String)), String())
